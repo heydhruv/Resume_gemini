@@ -5,13 +5,16 @@ import PyPDF2
 import google.generativeai as genai
 from google.generativeai.models import get_model
 
+# for model in genai.list_models():
+#     print(model)
+
 load_dotenv()
 API = os.getenv("GOOGLE_GEMINI_API")
 
 genai.configure(api_key=API)
 
 # model = genai.model('gemini-pro-vision')
-model = genai.GenerativeModel('gemini-pro-vision')
+# model = genai.get_model('gemini-pro-vision')
 
 def get_gemini_response(prompt,pdf,input_text):
     response = model.generate_content([input_text,pdf[0],prompt])
