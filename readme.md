@@ -1,6 +1,6 @@
 # Resume Shortlisting System
 ----------------------------
-#Installation
+# Installation
 pip install -r requirements.txt
 -------------------------------
 
